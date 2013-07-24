@@ -11,7 +11,7 @@
 \newcommand{\ifthen}[2]{\ifthenelse{#1}{#2}{}}
 
 %%% We can put stuff inside a \CVOnly{} tag to make it only show up for a CV :)
-\def\ResumeCV{1}   % 0=Resume, 1=CV
+\def\ResumeCV{0}   % 0=Resume, 1=CV
 \ifthen { \ResumeCV = 0 }
         { \newcommand{\ResumeOnly}[1]{#1}
           \newcommand{\CVOnly}[1]{}
@@ -36,7 +36,7 @@
 
 \name{Adam E. Leeper}
 % \address used twice to have two lines of address
-\address{PO Box 17501, Stanford, CA 94309}
+\address{469 Homer Ave, Palo Alto, CA 94301}
 \address{650.762.6844}
 \address{adamleeper@gmail.com} 
 \address{www.adamleeper.com}
@@ -45,15 +45,10 @@
  
 \begin{resume}
  
-%\section{OBJECTIVE}       Blah blah blah...
-
 \section{EDUCATION}
-%\textbf{EDUCATION}
 \vspace{1.0pc}
-%{\bf Stanford University: } 
-%\\[0.0pc]
 Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Advisor Ken Salisbury} 
-\hfill June 2013%
+\hfill 2013%
 \CVOnly{ {\small
 \\[0.0pc]Advisor: Prof. Kenneth Salisbury
 \\[0.0pc]Thesis: Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
@@ -64,27 +59,16 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 \\[0.0pc] B.S. Engineering Physics, The University of Tulsa, 3.99 GPA \hfill 2007 
 %
 %
-\section{SKILLS}
-\vspace{1.0pc}Strong expertise in robotics, dynamics, controls, and applied mathematics.
-%{\sl Computers: } Extensive experience operating in Linux and Windows. 
-\\[0.25pc] {\sl Computation: }
-Comfortable in Linux and Windows environments.
-Software engineering (C++, Python) for robotics and simulation, with extensive use of version control and issue tracking. 
-Proficiency in MATLAB for computation and data analysis.
-Experience with ROS, Qt, PCL, OpenGL, OpenCV. 
-\\[0.25pc]{\sl Electronics: } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.  
-\\[0.25pc]{\sl Hardware: } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks). 
-\\[0.25pc]{\sl Languages: } English (native), Spanish (fluent), French (proficient reading and writing). 
-\\[0.25 		pc]{\sl Other: } Private pilot, recording engineer, bassist.    
-%
-%
 \section{EXPERIENCE} 
 \vspace{1.0pc}
-{\bf Willow Garage, Inc., Menlo Park, CA } - Research Intern \hfill 2010 - present
-\\[0.0pc]Authored ROS software for robot manipulation in a version-control environment. 
-\CVOnly{\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.}
+{\bf hiDOF, Inc., South San Francisco, CA } - Senior Systems Engineer \hfill July 2013 - present
+\\[0.0pc]Software development for a variety of robotics applications.
 %
-\\[0.4pc]{\bf Salisbury Robotics Lab, Stanford, CA } - Ph.D. Candidate \hfill 2008 - present
+\\[0.4pc]{\bf Willow Garage, Inc., Menlo Park, CA } - Research Intern \hfill 2010 - 2013
+\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.
+%\CVOnly{\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.}
+%
+\\[0.4pc]{\bf Salisbury Robotics Lab, Stanford, CA } - Ph.D. Candidate \hfill 2008 - 2013
 \\[0.0pc]Conducted research in algorithms for haptic rendering and robot control.
 \CVOnly{\\[0.0pc]Implemented miniature stereo camera sensor hardware for a robot gripper.}
 %
@@ -109,22 +93,17 @@ Instructor, ME101 - Dynamics, San Jose State University\CVOnly{, 49 students}. \
 2010 
 \\[0.0pc] Course Assistant, ENGR15 - Dynamics with Paul Mitiguy, Stanford. \hfill \CVOnly{Fall}
 2009 
-
-\section{AWARDS}
-\vspace{1.0pc}	
-          2007-2012 National Science Foundation Graduate Research Fellowship 
-\CVOnly{\\[0.0pc]2007 Stanford Graduate Fellowship }
-%\\[0.0pc]2007 John McCamey Award preented by ISA
-\\[0.0pc] Tau Beta Pi and Phi Kappa Phi
-
-
+%
+%
+\ResumeOnly{\section{SELECTED} \vspace{0.7pc}}
 \section{PUBLICATIONS}
 \vspace{1.2pc}
 %
 %\CVOnly{\vspace{0.2pc}\textbf{Journal Articles}\\[0.4pc]}
 %
 \CVOnlySmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury. 
-Constraint-Aware Teleoperation for Robots in Unstructured Environments. \textit{In submission}.\\[0.4pc]}
+Assisted Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data. In 2nd Workshop on Robots in Clutter: 
+Preparing robots for the real world (in conjunction with RSS). June 2013, Berlin, Germany. \\[0.4pc]}
 %
 \CVOnlySmall{Chen, Tiffany., Ciocarlie, Matei., Cousins, Steve., Grice, Phillip M.., Hawkins, Kelsey., Hsiao, Kaijen., Kemp, Charlie., King, ChihHung., Lazewatsky, Daniel., \boldName{Leeper, Adam Eric.}, Nguyen, Hai., Paepcke, Andreas., Pantofaru, Caroline., Smart, William., and 
 Takayama, Leila. 
@@ -149,7 +128,7 @@ special issue on Assistive Robotics. Volume 20, Issue 1, 2013. \\[0.4pc]}
 %
 \CVOnlySmall{\boldName{A. Leeper}, S. Chan, and K. Salisbury. Constraint-based 3-DOF Haptic Rendering of Arbitrary Point Cloud Data. RSS Workshop on RGB-D Cameras, June 2011, Los Angeles, CA. \\[0.4pc]}
 %
-\BothSmall{\boldName{A. Leeper}, K. Hsiao, E. Chu, and K. Salisbury. Using Near-Field Stereo Vision for Robotic Grasping in Cluttered Environments. ISER, Dec. 2010, Delhi, India. \\[0.4pc]}
+\BothSmall{\boldName{A. Leeper}, K. Hsiao, E. Chu, and K. Salisbury. Using Near-Field Stereo Vision for Robotic Grasping in Cluttered Environments. ISER, Dec. 2010, Delhi, India.  \CVOnlySmall{\\[0.4pc]} }
 %
 \CVOnlySmall{Caruso, John F; Hari, P; \boldName{Leeper, Adam E}; Coday, Michael A; Monda, Julie K; Ramey, Elizabeth S; Hastings, Lori P; Golden, Mallory R; Davison, Steve W. Impact of Acceleration on Blood Lactate Values Derived From High-Speed Resistance Exercise. Journal of Strength \& Conditioning Research. 23(7):2009-2014, October 2009.  \\[0.4pc]}
 %
@@ -157,11 +136,36 @@ special issue on Assistive Robotics. Volume 20, Issue 1, 2013. \\[0.4pc]}
 %
 \CVOnlySmall{\boldName{A. Leeper}, M. Coday, P. Hari, J. Caruso. Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers. Proceedings of 53rd IIS, April 2007, Tulsa, OK.}
 %
+%
+\section{SKILLS}
+\vspace{1.0pc}Strong expertise in robotics, dynamics, controls, and applied mathematics.
+%{\sl Computers: } Extensive experience operating in Linux and Windows. 
+\\[0.25pc] {\sl Computation: }
+Comfortable in Linux and Windows environments.
+Software engineering (C++, Python) for robotics and simulation, with extensive use of version control and issue tracking. 
+Proficiency in MATLAB for computation and data analysis.
+Experience with ROS, Qt, PCL, OpenGL, OpenCV. 
+\\[0.25pc]{\sl Electronics: } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.  
+\\[0.25pc]{\sl Hardware: } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks). 
+\\[0.25pc]{\sl Languages: } English (native), Spanish (fluent), French (proficient reading and writing). 
+\\[0.25 		pc]{\sl Other: } Private pilot, recording engineer, bassist.    
+%
+%
+\CVOnly{
+\section{AWARDS}
+\vspace{1.0pc}	
+          2007-2012 National Science Foundation Graduate Research Fellowship 
+\CVOnly{\\[0.0pc]2007 Stanford Graduate Fellowship }
+\CVOnly{\\[0.0pc]2007 John McCamey Award presented by ISA}
+\\[0.0pc] Tau Beta Pi and Phi Kappa Phi
+}
+%
 \CVOnly{
 \section{REFERENCES}
 \vspace{1.0pc}
 Kenneth Salisbury, Prof. Computer Science, 650.465.5700, jks@robotics.stanford.edu
 \\[0.0pc]Paul Mitiguy, Prof. Mechanical Engineering, 650.346.9595,  mitiguy@stanford.edu
+\\[0.0pc]Kaijen Hsiao, Research Scientist, Willow Garage, Inc., 617.304.1759,  hsiao@willowgarage.com
 %\\[0.0pc]Oussama Khatib, Prof. Computer Science, 650.723.9753, khatib@cs.stanford.edu
 }
 % 
