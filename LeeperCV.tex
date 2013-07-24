@@ -1,0 +1,176 @@
+% LaTeX resume using res.cls
+\documentclass[line,margin]{res} 
+\usepackage{ifthen}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textheight}{9.25in}
+\setlength{\voffset}{-0.125in}
+
+\newsectionwidth{20pt}
+
+\newcommand{\ifthen}[2]{\ifthenelse{#1}{#2}{}}
+
+%%% We can put stuff inside a \CVOnly{} tag to make it only show up for a CV :)
+\def\ResumeCV{1}   % 0=Resume, 1=CV
+\ifthen { \ResumeCV = 0 }
+        { \newcommand{\ResumeOnly}[1]{#1}
+          \newcommand{\CVOnly}[1]{}
+          \newcommand{\CVOnlySmall}[1]{{\small \CVOnly{#1}}}
+          \newcommand{\ResumeOnlySmall}[1]{{\small \CVOnly{#1}}}
+          \newcommand{\BothSmall}[1]{{\small #1}}   }        
+\ifthen { \ResumeCV = 1 }
+        { \newcommand{\ResumeOnly}[1]{}
+          \newcommand{\CVOnly}[1]{#1}
+          \newcommand{\CVOnlySmall}[1]{{\CVOnly{#1}}}
+          \newcommand{\ResumeOnlySmall}[1]{{\CVOnly{#1}}}
+          \newcommand{\BothSmall}[1]{{#1}}    }
+
+     
+          
+\newcommand{\boldName}[1]{\textbf{#1}}
+
+%\setpapersize{USletter}
+%\setmarginsrb{1in}{1in}{1in}{1in}{0pt}{0mm}{0pt}{0mm}
+
+\begin{document}
+
+\name{Adam E. Leeper}
+% \address used twice to have two lines of address
+\address{PO Box 17501, Stanford, CA 94309}
+\address{650.762.6844}
+\address{adamleeper@gmail.com} 
+\address{www.adamleeper.com}
+%\address{www.stanford.edu/$\sim$aleeper }
+
+ 
+\begin{resume}
+ 
+%\section{OBJECTIVE}       Blah blah blah...
+
+\section{EDUCATION}
+%\textbf{EDUCATION}
+\vspace{1.0pc}
+%{\bf Stanford University: } 
+%\\[0.0pc]
+Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Advisor Ken Salisbury} 
+\hfill June 2013%
+\CVOnly{ {\small
+\\[0.0pc]Advisor: Prof. Kenneth Salisbury
+\\[0.0pc]Thesis: Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
+\\[-0.6pc]} }
+%
+\\[0.0pc]M.S. Mechanical Engineering, Stanford University, 3.97 GPA \hfill  2009 
+%\\[0.0pc]{\bf University of Tulsa: } 
+\\[0.0pc] B.S. Engineering Physics, The University of Tulsa, 3.99 GPA \hfill 2007 
+%
+%
+\section{SKILLS}
+\vspace{1.0pc}Strong expertise in robotics, dynamics, controls, and applied mathematics.
+%{\sl Computers: } Extensive experience operating in Linux and Windows. 
+\\[0.25pc] {\sl Computation: }
+Comfortable in Linux and Windows environments.
+Software engineering (C++, Python) for robotics and simulation, with extensive use of version control and issue tracking. 
+Proficiency in MATLAB for computation and data analysis.
+Experience with ROS, Qt, PCL, OpenGL, OpenCV. 
+\\[0.25pc]{\sl Electronics: } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.  
+\\[0.25pc]{\sl Hardware: } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks). 
+\\[0.25pc]{\sl Languages: } English (native), Spanish (fluent), French (proficient reading and writing). 
+\\[0.25 		pc]{\sl Other: } Private pilot, recording engineer, bassist.    
+%
+%
+\section{EXPERIENCE} 
+\vspace{1.0pc}
+{\bf Willow Garage, Inc., Menlo Park, CA } - Research Intern \hfill 2010 - present
+\\[0.0pc]Authored ROS software for robot manipulation in a version-control environment. 
+\CVOnly{\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.}
+%
+\\[0.4pc]{\bf Salisbury Robotics Lab, Stanford, CA } - Ph.D. Candidate \hfill 2008 - present
+\\[0.0pc]Conducted research in algorithms for haptic rendering and robot control.
+\CVOnly{\\[0.0pc]Implemented miniature stereo camera sensor hardware for a robot gripper.}
+%
+\\[0.4pc]{\bf Qual-Tron, Inc., Tulsa, OK} - Electrical Engineering Intern \hfill 2006 - 2007
+\CVOnly{\\[0.0pc] Designed and implemented test procedures for IR and magnetic sensor products. }
+\\[0.0pc]Led redesign of a magnetic sensor product to reduce cost and simplify assembly.
+%
+%
+\section{TEACHING} 
+\vspace{1.0pc}
+%{\bf Instructor: }
+%\\[0.0pc] 
+Instructor, ME101 - Dynamics, San Jose State University\CVOnly{, 49 students}. \hfill \ResumeOnly{2011,} \CVOnly{Fall }2012%
+\CVOnly{\\[0.0pc]Instructor, ME101 - Dynamics, San Jose State University, 56 students. \hfill Fall 2011}
+\\[0.0pc] Instructor, Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
+2010
+%\\[0.4pc] {\bf Course Assistant:} 
+\\[0.4pc] Course Assistant, ME331b - Dynamics and Simulation with Paul Mitiguy, Stanford. \hfill \CVOnly{Spring} 2012
+\\[0.0pc] Course Assistant, CS277 - Haptics with Ken Salisbury, Stanford. \hfill \CVOnly{Winter}
+2011
+\\[0.0pc] Course Assistant, CS223a - Robotics with Oussama Khatib, Stanford. \hfill \CVOnly{Winter} 
+2010 
+\\[0.0pc] Course Assistant, ENGR15 - Dynamics with Paul Mitiguy, Stanford. \hfill \CVOnly{Fall}
+2009 
+
+\section{AWARDS}
+\vspace{1.0pc}	
+          2007-2012 National Science Foundation Graduate Research Fellowship 
+\CVOnly{\\[0.0pc]2007 Stanford Graduate Fellowship }
+%\\[0.0pc]2007 John McCamey Award preented by ISA
+\\[0.0pc] Tau Beta Pi and Phi Kappa Phi
+
+
+\section{PUBLICATIONS}
+\vspace{1.2pc}
+%
+%\CVOnly{\vspace{0.2pc}\textbf{Journal Articles}\\[0.4pc]}
+%
+\CVOnlySmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury. 
+Constraint-Aware Teleoperation for Robots in Unstructured Environments. \textit{In submission}.\\[0.4pc]}
+%
+\CVOnlySmall{Chen, Tiffany., Ciocarlie, Matei., Cousins, Steve., Grice, Phillip M.., Hawkins, Kelsey., Hsiao, Kaijen., Kemp, Charlie., King, ChihHung., Lazewatsky, Daniel., \boldName{Leeper, Adam Eric.}, Nguyen, Hai., Paepcke, Andreas., Pantofaru, Caroline., Smart, William., and 
+Takayama, Leila. 
+%Robots for Humanity: A Case Study in Assistive Mobile Manipulation. 
+Robots for humanity: using assistive robotics to empower people with disabilities.
+IEEE Robotics and Automation Magazine 
+special issue on Assistive Robotics. Volume 20, Issue 1, 2013. \\[0.4pc]}
+%
+\CVOnlySmall{A. Pratkanis, \boldName{A. Leeper}, K. Salisbury. Replacing the Office Intern: An Autonomous Coffee Run with a Mobile Manipulator. ICRA, May 2013, Karlsruhe, Germany. \\[0.4pc]}
+%
+\CVOnlySmall{M. Ciocarlie, K. Hsiao, \boldName{A. Leeper}, D. Gossow. Mobile Manipulation Through an Assistive Home Robot. IROS, October 2012, Algarve, Portugal. \\[0.4pc]}
+%
+\BothSmall{\boldName{A. Leeper}, S. Chan, and K. Salisbury. Point Clouds Can Be Represented as Implicit Surfaces for Constraint-Based Haptic Rendering. ICRA, May 2012, St. Paul, MN. \\[0.4pc]}
+%
+\BothSmall{\boldName{A. Leeper}, S. Chan, K. Hsiao, M. Ciocarlie, K. Salisbury. Constraint-based Haptic Rendering for Teleoperated Robot Grasping. IEEE Haptics Symposium, March 2012, Vancouver, Canada. \\[0.4pc]}
+%
+\BothSmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, L. Takayama, D. Gossow. Strategies for Human-in-the-Loop Robotic Grasping. HRI, March 2012, Boston, MA. \\[0.4pc]}
+%
+\CVOnlySmall{R. Brewer, \boldName{A. Leeper}, K. Salisbury. A Friction Differential and Cable Transmission Design for a 3-DOF Haptic Device with Spherical Kinematics. IROS, Sept. 2011, San Francisco, CA. \\[0.4pc]}
+%
+\CVOnlySmall{D. Gossow, \boldName{A. Leeper}, D. Hershberger, M. Ciocarlie. Interactive Markers: 3-D User Interfaces for ROS Applications [ROS Topics]. IEEE Robotics and Automation Magazine, December 2011. \\[0.4pc]}
+%
+\CVOnlySmall{\boldName{A. Leeper}, S. Chan, and K. Salisbury. Constraint-based 3-DOF Haptic Rendering of Arbitrary Point Cloud Data. RSS Workshop on RGB-D Cameras, June 2011, Los Angeles, CA. \\[0.4pc]}
+%
+\BothSmall{\boldName{A. Leeper}, K. Hsiao, E. Chu, and K. Salisbury. Using Near-Field Stereo Vision for Robotic Grasping in Cluttered Environments. ISER, Dec. 2010, Delhi, India. \\[0.4pc]}
+%
+\CVOnlySmall{Caruso, John F; Hari, P; \boldName{Leeper, Adam E}; Coday, Michael A; Monda, Julie K; Ramey, Elizabeth S; Hastings, Lori P; Golden, Mallory R; Davison, Steve W. Impact of Acceleration on Blood Lactate Values Derived From High-Speed Resistance Exercise. Journal of Strength \& Conditioning Research. 23(7):2009-2014, October 2009.  \\[0.4pc]}
+%
+\CVOnlySmall{Caruso J.F., Hari P., Coday M.A., \boldName{Leeper A.}, Ramey E.S., Monda J.K., Hastings L.P., and Davison S. (2008). Performance evaluation of a high-speed inertial exercise trainer. The Journal of Strength \& Conditioning Research. 22(6): 1760-1768. \\[0.4pc]}
+%
+\CVOnlySmall{\boldName{A. Leeper}, M. Coday, P. Hari, J. Caruso. Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers. Proceedings of 53rd IIS, April 2007, Tulsa, OK.}
+%
+\CVOnly{
+\section{REFERENCES}
+\vspace{1.0pc}
+Kenneth Salisbury, Prof. Computer Science, 650.465.5700, jks@robotics.stanford.edu
+\\[0.0pc]Paul Mitiguy, Prof. Mechanical Engineering, 650.346.9595,  mitiguy@stanford.edu
+%\\[0.0pc]Oussama Khatib, Prof. Computer Science, 650.723.9753, khatib@cs.stanford.edu
+}
+% 
+\end{resume}
+\end{document}
+
+
+
+
+
+
+
