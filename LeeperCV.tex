@@ -11,7 +11,7 @@
 \newcommand{\ifthen}[2]{\ifthenelse{#1}{#2}{}}
 
 %%% We can put stuff inside a \CVOnly{} tag to make it only show up for a CV :)
-\def\ResumeCV{0}   % 0=Resume, 1=CV
+\def\ResumeCV{1}   % 0=Resume, 1=CV
 \ifthen { \ResumeCV = 0 }
         { \newcommand{\ResumeOnly}[1]{#1}
           \newcommand{\CVOnly}[1]{}
@@ -50,8 +50,8 @@
 Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Advisor Ken Salisbury} 
 \hfill 2013%
 \CVOnly{ {\small
-\\[0.0pc]Advisor: Prof. Kenneth Salisbury
-\\[0.0pc]Thesis: Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
+\\[0.0pc]{\bf Advisor:} Prof. Kenneth Salisbury
+\\[0.0pc]{\bf Thesis:} Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
 \\[-0.6pc]} }
 %
 \\[0.0pc]M.S. Mechanical Engineering, Stanford University, 3.97 GPA \hfill  2009 
@@ -61,14 +61,14 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 %
 \section{EXPERIENCE} 
 \vspace{1.0pc}
-{\bf hiDOF, Inc., South San Francisco, CA } - Senior Systems Engineer \hfill July 2013 - present
-\\[0.0pc]Software development for a variety of robotics applications.
+{\bf hiDOF, Inc., South San Francisco, CA} - Senior Systems Engineer \hfill 2013
+\\[0.0pc]Technology transfer, exploration, and software development for robotics applications.
 %
-\\[0.4pc]{\bf Willow Garage, Inc., Menlo Park, CA } - Research Intern \hfill 2010 - 2013
+\\[0.4pc]{\bf Willow Garage, Inc., Menlo Park, CA} - Research Intern \hfill 2010 - 2013
 \\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.
 %\CVOnly{\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.}
 %
-\\[0.4pc]{\bf Salisbury Robotics Lab, Stanford, CA } - Ph.D. Candidate \hfill 2008 - 2013
+\\[0.4pc]{\bf Salisbury Robotics Lab, Stanford, CA} - Ph.D. Candidate \hfill 2008 - 2013
 \\[0.0pc]Conducted research in algorithms for haptic rendering and robot control.
 \CVOnly{\\[0.0pc]Implemented miniature stereo camera sensor hardware for a robot gripper.}
 %
@@ -76,14 +76,23 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 \CVOnly{\\[0.0pc] Designed and implemented test procedures for IR and magnetic sensor products. }
 \\[0.0pc]Led redesign of a magnetic sensor product to reduce cost and simplify assembly.
 %
+\\[0.4pc]{\bf \underline{Consulting:}}
+\\[0.2pc]{\bf Motion Genesis} - Development of visualization tools. \hfill 2011-2013
+\\[0.0pc]{\bf Applied Materials, Inc.}- Subcontracting consultant for motion visualization. \hfill 2012
+\\[0.0pc]{\bf Charm Labs} - Dynamics and controls. Confidential. \hfill 2012
+%
+
+%
 %
 \section{TEACHING} 
 \vspace{1.0pc}
 %{\bf Instructor: }
 %\\[0.0pc] 
-Instructor, ME101 - Dynamics, San Jose State University\CVOnly{, 49 students}. \hfill \ResumeOnly{2011,} \CVOnly{Fall }2012%
-\CVOnly{\\[0.0pc]Instructor, ME101 - Dynamics, San Jose State University, 56 students. \hfill Fall 2011}
-\\[0.0pc] Instructor, Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
+{\bf Instructor}, ME101 Dynamics, San Jose State University\CVOnly{, 49 students}. \hfill \ResumeOnly{2011,} \CVOnly{Fall }2012%
+\CVOnly{\\[0.0pc]Student feedback in ??? percentile for SOMETHING, ??? percentile overall.}
+\CVOnly{\\[0.0pc]{\bf Instructor}, ME101 Dynamics, San Jose State University, 56 students. \hfill Fall 2011}
+\CVOnly{\\[0.0pc]Student feedback in ??? percentile for SOMETHING, ??? percentile overall.}
+\\[0.0pc]{\bf Instructor}, Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
 2010
 %\\[0.4pc] {\bf Course Assistant:} 
 \\[0.4pc] Course Assistant, ME331b - Dynamics and Simulation with Paul Mitiguy, Stanford. \hfill \CVOnly{Spring} 2012
