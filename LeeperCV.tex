@@ -24,6 +24,8 @@
           \newcommand{\CVOnlySmall}[1]{{\CVOnly{#1}}}
           \newcommand{\ResumeOnlySmall}[1]{{\CVOnly{#1}}}
           \newcommand{\BothSmall}[1]{{#1}}    }
+          
+\newcommand{\hide}[1]{}
 
      
           
@@ -45,12 +47,12 @@
  
 \begin{resume}
  
-\section{EDUCATION}
+\section{\underline{EDUCATION}}
 \vspace{1.0pc}
 Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Advisor Ken Salisbury} 
 \hfill 2013%
 \CVOnly{ {\small
-\\[0.0pc]{\bf Advisor:} Prof. Kenneth Salisbury
+\\[0.0pc]{\bf Advisor:} Professor Kenneth Salisbury
 \\[0.0pc]{\bf Thesis:} Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
 \\[-0.6pc]} }
 %
@@ -59,39 +61,45 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 \\[0.0pc] B.S. Engineering Physics, The University of Tulsa, 3.99 GPA \hfill 2007 
 %
 %
-\section{EXPERIENCE} 
+\section{\underline{EXPERIENCE}} 
 \vspace{1.0pc}
-{\bf hiDOF, Inc., South San Francisco, CA} - Senior Systems Engineer \hfill 2013
+{\bf Senior Systems Engineer} -  hiDOF, Inc., South San Francisco, CA  \hfill 2013
 \\[0.0pc]Technology transfer, exploration, and software development for robotics applications.
 %
-\\[0.4pc]{\bf Willow Garage, Inc., Menlo Park, CA} - Research Intern \hfill 2010 - 2013
-\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.
+\\[0.4pc]{\bf Research Intern} - Willow Garage, Inc., Menlo Park, CA \hfill 2010 - 2013
+\\[0.0pc]Created systems, controllers, and user interfaces for teleoperated mobile manipulation.
 %\CVOnly{\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.}
 %
-\\[0.4pc]{\bf Salisbury Robotics Lab, Stanford, CA} - Ph.D. Candidate \hfill 2008 - 2013
+\\[0.4pc]{\bf Research Assistant} - Salisbury Robotics Lab, Stanford, CA \hfill 2008 - 2013
 \\[0.0pc]Conducted research in algorithms for haptic rendering and robot control.
 \CVOnly{\\[0.0pc]Implemented miniature stereo camera sensor hardware for a robot gripper.}
 %
-\\[0.4pc]{\bf Qual-Tron, Inc., Tulsa, OK} - Electrical Engineering Intern \hfill 2006 - 2007
+\CVOnly{
+\\[0.4pc]{\bf Electrical Engineering Intern} - Qual-Tron, Inc., Tulsa, OK \hfill 2006 - 2007 }
 \CVOnly{\\[0.0pc] Designed and implemented test procedures for IR and magnetic sensor products. }
 \\[0.0pc]Led redesign of a magnetic sensor product to reduce cost and simplify assembly.
 %
+\hide{
+\\[0.4pc]{\bf Summer Intern} - Atmel Corporation \hfill 2005
+\\[0.4pc]{\bf Summer Research Intern} - NASA Glenn Research Center \hfill 2004%
+}
+%
 \\[0.4pc]{\bf \underline{Consulting:}}
-\\[0.2pc]{\bf Motion Genesis} - Development of visualization tools. \hfill 2011-2013
-\\[0.0pc]{\bf Applied Materials, Inc.}- Subcontracting consultant for motion visualization. \hfill 2012
-\\[0.0pc]{\bf Charm Labs} - Dynamics and controls. Confidential. \hfill 2012
+\\[0.2pc]{\bf Motion Genesis, LLC} - Developed visualization tools for multi-body systems. \hfill 2011-2013
+\\[0.0pc]{\bf Applied Materials, Inc.}- Subcontracting consultant for robot motion visualization. \hfill 2012
+\\[0.0pc]{\bf Charm Labs} - Dynamics and control. Confidential. \hfill 2012
 %
 
 %
 %
-\section{TEACHING} 
+\section{\underline{TEACHING}} 
 \vspace{1.0pc}
 %{\bf Instructor: }
 %\\[0.0pc] 
 {\bf Instructor}, ME101 Dynamics, San Jose State University\CVOnly{, 49 students}. \hfill \ResumeOnly{2011,} \CVOnly{Fall }2012%
-\CVOnly{\\[0.0pc]Student feedback in ??? percentile for SOMETHING, ??? percentile overall.}
-\CVOnly{\\[0.0pc]{\bf Instructor}, ME101 Dynamics, San Jose State University, 56 students. \hfill Fall 2011}
-\CVOnly{\\[0.0pc]Student feedback in ??? percentile for SOMETHING, ??? percentile overall.}
+\CVOnly{\\[0.0pc]Student-rated 78th percentile in College of Engineering for overall teaching quality.
+\\[0.0pc]{\bf Instructor}, ME101 Dynamics, San Jose State University, 56 students. \hfill Fall 2011
+\\[0.0pc]Student-rated 72nd percentile in College of Engineering for overall teaching quality.}
 \\[0.0pc]{\bf Instructor}, Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
 2010
 %\\[0.4pc] {\bf Course Assistant:} 
@@ -105,10 +113,15 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 %
 %
 \ResumeOnly{\section{SELECTED} \vspace{0.7pc}}
-\section{PUBLICATIONS}
+\section{\underline{PUBLICATIONS}}
 \vspace{1.2pc}
 %
 %\CVOnly{\vspace{0.2pc}\textbf{Journal Articles}\\[0.4pc]}
+%
+%\CVOnlySmall{
+%\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury. 
+%Methods for Collision-Free Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data.
+%In submission. \\[0.4pc]}
 %
 \CVOnlySmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury. 
 Assisted Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data. In 2nd Workshop on Robots in Clutter: 
@@ -146,7 +159,7 @@ special issue on Assistive Robotics. Volume 20, Issue 1, 2013. \\[0.4pc]}
 \CVOnlySmall{\boldName{A. Leeper}, M. Coday, P. Hari, J. Caruso. Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers. Proceedings of 53rd IIS, April 2007, Tulsa, OK.}
 %
 %
-\section{SKILLS}
+\section{\underline{SKILLS}}
 \vspace{1.0pc}Strong expertise in robotics, dynamics, controls, and applied mathematics.
 %{\sl Computers: } Extensive experience operating in Linux and Windows. 
 \\[0.25pc] {\sl Computation: }
@@ -161,16 +174,22 @@ Experience with ROS, Qt, PCL, OpenGL, OpenCV.
 %
 %
 \CVOnly{
-\section{AWARDS}
+\section{\underline{AWARDS}}
 \vspace{1.0pc}	
           2007-2012 National Science Foundation Graduate Research Fellowship 
 \CVOnly{\\[0.0pc]2007 Stanford Graduate Fellowship }
 \CVOnly{\\[0.0pc]2007 John McCamey Award presented by ISA}
-\\[0.0pc] Tau Beta Pi and Phi Kappa Phi
+\ResumeOnly{\\[0.0pc] Member of Tau Beta Pi and Phi Kappa Phi Honor Societies}
+\CVOnly{
+\\[0.0pc] Member, Tau Beta Pi Engineering Honor Society
+\\[0.0pc] Member, Sigma Pi Sigma Physics Honor Society
+\\[0.0pc] Member, Phi Kappa Phi Honor Society
+\\[0.0pc] Member, Mortar Board National College Senior Honor Society
+}
 }
 %
 \CVOnly{
-\section{REFERENCES}
+\section{\underline{REFERENCES}}
 \vspace{1.0pc}
 Kenneth Salisbury, Prof. Computer Science, 650.465.5700, jks@robotics.stanford.edu
 \\[0.0pc]Paul Mitiguy, Prof. Mechanical Engineering, 650.346.9595,  mitiguy@stanford.edu
