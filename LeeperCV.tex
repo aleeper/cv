@@ -1,6 +1,7 @@
 % LaTeX resume using res.cls
 \documentclass[line,margin]{res} 
 \usepackage{ifthen}
+\usepackage{tabularx,booktabs}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 \setlength{\textheight}{9.25in}
@@ -86,7 +87,7 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 %
 \\[0.4pc]{\bf \underline{Consulting:}}
 \\[0.2pc]{\bf Motion Genesis, LLC} - Developed visualization tools for multi-body systems. \hfill 2011-2013
-\\[0.0pc]{\bf Applied Materials, Inc.}- Subcontracting consultant for robot motion visualization. \hfill 2012
+\\[0.0pc]{\bf Applied Materials, Inc.} - Subcontracting consultant for robot motion visualization. \hfill 2012
 \\[0.0pc]{\bf Charm Labs} - Dynamics and control. Confidential. \hfill 2012
 %
 
@@ -96,19 +97,28 @@ Ph.D. Mechanical Engineering (Robotics), Stanford University\ResumeOnly{, Adviso
 \vspace{1.0pc}
 %{\bf Instructor: }
 %\\[0.0pc] 
-{\bf Instructor}, ME101 Dynamics, San Jose State University\CVOnly{, 49 students}. \hfill \ResumeOnly{2011,} \CVOnly{Fall }2012%
-\CVOnly{\\[0.0pc]Student-rated 78th percentile in College of Engineering for overall teaching quality.
-\\[0.0pc]{\bf Instructor}, ME101 Dynamics, San Jose State University, 56 students. \hfill Fall 2011
-\\[0.0pc]Student-rated 72nd percentile in College of Engineering for overall teaching quality.}
-\\[0.0pc]{\bf Instructor}, Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
+{\bf Instructor:} ME101 Dynamics, San Jose State University\CVOnly{, 35 students}. \hfill \ResumeOnly{2011, 2012} \CVOnly{Fall }2013%
+%
+\CVOnly{
+\\[0.0pc]
+\begin{tabularx}{\textwidth}{@{}l@{ }Xr@{}}
+	         {\bf Instructor:} & ME101 Dynamics, San Jose State University\CVOnly{, 49 students}. & \hfill Fall 2012%
+	\\[0.0pc]                  & Student-rated 4.8/5.0 for overall teaching quality. &
+	\\[0.0pc]{\bf Instructor:} & ME101 Dynamics, San Jose State University, 56 students. & \hfill Fall 2011
+	\\[0.0pc]                  & Student-rated 4.6/5.0 for overall teaching quality. &
+\end{tabularx}
+}
+%
+\\[0.0pc]
+{\bf Instructor:} Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
 2010
 %\\[0.4pc] {\bf Course Assistant:} 
-\\[0.4pc] Course Assistant, ME331b - Dynamics and Simulation with Paul Mitiguy, Stanford. \hfill \CVOnly{Spring} 2012
-\\[0.0pc] Course Assistant, CS277 - Haptics with Ken Salisbury, Stanford. \hfill \CVOnly{Winter}
+\\[0.4pc] Course Assistant: ME331b - Dynamics and Simulation with Paul Mitiguy, Stanford. \hfill \CVOnly{Spring} 2012
+\\[0.0pc] Course Assistant: CS277 - Haptics with Ken Salisbury, Stanford. \hfill \CVOnly{Winter}
 2011
-\\[0.0pc] Course Assistant, CS223a - Robotics with Oussama Khatib, Stanford. \hfill \CVOnly{Winter} 
+\\[0.0pc] Course Assistant: CS223a - Robotics with Oussama Khatib, Stanford. \hfill \CVOnly{Winter} 
 2010 
-\\[0.0pc] Course Assistant, ENGR15 - Dynamics with Paul Mitiguy, Stanford. \hfill \CVOnly{Fall}
+\\[0.0pc] Course Assistant: ENGR15 - Dynamics with Paul Mitiguy, Stanford. \hfill \CVOnly{Fall}
 2009 
 %
 %
