@@ -24,7 +24,7 @@ spell:
 	ispell *.tex
 
 clean:
-	rm -fv *.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof #$(PAPER).pdf $(SUPP).pdf $(BUNDLE)
+	rm -fv *.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof  Leeper*.pdf
 
 resume:
 	$(TEX) -jobname=$(JOB) -interaction=nonstopmode "\newcommand\ResumeCV{0}\input{$(FILE).tex}"
