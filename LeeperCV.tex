@@ -1,9 +1,9 @@
 % LaTeX resume using res.cls
-\documentclass[line,margin]{res} 
+\documentclass[line,margin]{res}
 \usepackage{ifthen}
 \usepackage{tabularx,booktabs}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{newcent}   % uses new century schoolbook postscript font
 \setlength{\textheight}{9.25in}
 \setlength{\voffset}{-0.125in}
 
@@ -12,24 +12,25 @@
 \newcommand{\ifthen}[2]{\ifthenelse{#1}{#2}{}}
 
 %%% We can put stuff inside a \CVOnly{} tag to make it only show up for a CV :)
-\def\ResumeCV{1}   % 0=Resume, 1=CV
+\providecommand{\ResumeCV}{0}% fallback definition % 0=Resume, 1=CV
+%\def\ResumeCV{0}  % 0=Resume, 1=CV
 \ifthen { \ResumeCV = 0 }
         { \newcommand{\ResumeOnly}[1]{#1}
           \newcommand{\CVOnly}[1]{}
           \newcommand{\CVOnlySmall}[1]{{\small \CVOnly{#1}}}
           \newcommand{\ResumeOnlySmall}[1]{{\small \CVOnly{#1}}}
-          \newcommand{\BothSmall}[1]{{\small #1}}   }        
+          \newcommand{\BothSmall}[1]{{\small #1}}   }
 \ifthen { \ResumeCV = 1 }
         { \newcommand{\ResumeOnly}[1]{}
           \newcommand{\CVOnly}[1]{#1}
           \newcommand{\CVOnlySmall}[1]{{\CVOnly{#1}}}
           \newcommand{\ResumeOnlySmall}[1]{{\CVOnly{#1}}}
           \newcommand{\BothSmall}[1]{{#1}}    }
-          
+
 \newcommand{\hide}[1]{}
 
-     
-          
+
+
 \newcommand{\boldName}[1]{\textbf{#1}}
 
 %\setpapersize{USletter}
@@ -41,28 +42,28 @@
 % \address used twice to have two lines of address
 \address{469 Homer Ave, Palo Alto, CA 94301}
 \address{650.762.6844}
-\address{adamleeper@gmail.com} 
+\address{adamleeper@gmail.com}
 \address{www.adamleeper.com}
 %\address{www.stanford.edu/$\sim$aleeper }
 
- 
+
 \begin{resume}
- 
+
 \section{\underline{EDUCATION}}
 \vspace{1.0pc}
-Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salisbury} 
+Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salisbury}
 \hfill 2013%
 \CVOnly{ {\small
 \\[0.0pc]{\bf Advisor:} Professor Kenneth Salisbury
 \\[0.0pc]{\bf Thesis:} Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
 \\[-0.6pc]} }
 %
-\\[0.0pc]M.S. Mechanical Engineering, Stanford University, 3.97 GPA \hfill  2009 
-%\\[0.0pc]{\bf University of Tulsa: } 
-\\[0.0pc] B.S. Engineering Physics, The University of Tulsa, 3.99 GPA \hfill 2007 
+\\[0.0pc]M.S. Mechanical Engineering, Stanford University, 3.97 GPA \hfill  2009
+%\\[0.0pc]{\bf University of Tulsa: }
+\\[0.0pc] B.S. Engineering Physics, The University of Tulsa, 3.99 GPA \hfill 2007
 %
 %
-\section{\underline{EXPERIENCE}} 
+\section{\underline{EXPERIENCE}}
 \vspace{1.0pc}
 {\bf Senior Systems Engineer} -  hiDOF, Inc., South San Francisco, CA  \hfill 2013
 \\[0.0pc]Technology transfer, exploration, and software development for robotics applications.
@@ -93,10 +94,10 @@ Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salis
 
 %
 %
-\section{\underline{TEACHING}} 
+\section{\underline{TEACHING}}
 \vspace{1.0pc}
 %{\bf Instructor: }
-%\\[0.0pc] 
+%\\[0.0pc]
 {\bf Instructor:} ME101 Dynamics, San Jose State University\CVOnly{, 35 students}. \hfill \ResumeOnly{2011, 2012} \CVOnly{Fall }2013%
 %
 \CVOnly{
@@ -110,16 +111,16 @@ Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salis
 }
 %
 \\[0.0pc]
-{\bf Instructor:} Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer} 
+{\bf Instructor:} Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer}
 2010
-%\\[0.4pc] {\bf Course Assistant:} 
+%\\[0.4pc] {\bf Course Assistant:}
 \\[0.4pc] Course Assistant: ME331b - Dynamics and Simulation with Paul Mitiguy, Stanford. \hfill \CVOnly{Spring} 2012
 \\[0.0pc] Course Assistant: CS277 - Haptics with Ken Salisbury, Stanford. \hfill \CVOnly{Winter}
 2011
-\\[0.0pc] Course Assistant: CS223a - Robotics with Oussama Khatib, Stanford. \hfill \CVOnly{Winter} 
-2010 
+\\[0.0pc] Course Assistant: CS223a - Robotics with Oussama Khatib, Stanford. \hfill \CVOnly{Winter}
+2010
 \\[0.0pc] Course Assistant: ENGR15 - Dynamics with Paul Mitiguy, Stanford. \hfill \CVOnly{Fall}
-2009 
+2009
 %
 %
 \ResumeOnly{\section{SELECTED} \vspace{0.7pc}}
@@ -129,19 +130,19 @@ Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salis
 %\CVOnly{\vspace{0.2pc}\textbf{Journal Articles}\\[0.4pc]}
 %
 %
-\BothSmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, and K. Salisbury. 
-Methods for Collision-Free Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data. 
+\BothSmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, and K. Salisbury.
+Methods for Collision-Free Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data.
 2013 IEEE-RAS International Conference on Humanoid Robots. October, 2013. Atlanta, Georgia. \\[0.4pc]}
 %
-\CVOnlySmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury. 
-Assisted Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data. In 2nd Workshop on Robots in Clutter: 
+\CVOnlySmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury.
+Assisted Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data. In 2nd Workshop on Robots in Clutter:
 Preparing robots for the real world (in conjunction with RSS). June 2013, Berlin, Germany. \\[0.4pc]}
 %
-\CVOnlySmall{Chen, Tiffany., Ciocarlie, Matei., Cousins, Steve., Grice, Phillip M.., Hawkins, Kelsey., Hsiao, Kaijen., Kemp, Charlie., King, ChihHung., Lazewatsky, Daniel., \boldName{Leeper, Adam Eric.}, Nguyen, Hai., Paepcke, Andreas., Pantofaru, Caroline., Smart, William., and 
-Takayama, Leila. 
-%Robots for Humanity: A Case Study in Assistive Mobile Manipulation. 
+\CVOnlySmall{Chen, Tiffany., Ciocarlie, Matei., Cousins, Steve., Grice, Phillip M.., Hawkins, Kelsey., Hsiao, Kaijen., Kemp, Charlie., King, ChihHung., Lazewatsky, Daniel., \boldName{Leeper, Adam Eric.}, Nguyen, Hai., Paepcke, Andreas., Pantofaru, Caroline., Smart, William., and
+Takayama, Leila.
+%Robots for Humanity: A Case Study in Assistive Mobile Manipulation.
 Robots for humanity: using assistive robotics to empower people with disabilities.
-IEEE Robotics and Automation Magazine 
+IEEE Robotics and Automation Magazine
 special issue on Assistive Robotics. Volume 20, Issue 1, 2013. \\[0.4pc]}
 %
 \CVOnlySmall{A. Pratkanis, \boldName{A. Leeper}, K. Salisbury. Replacing the Office Intern: An Autonomous Coffee Run with a Mobile Manipulator. ICRA, May 2013, Karlsruhe, Germany. \\[0.4pc]}
@@ -166,29 +167,61 @@ special issue on Assistive Robotics. Volume 20, Issue 1, 2013. \\[0.4pc]}
 %
 \CVOnlySmall{Caruso J.F., Hari P., Coday M.A., \boldName{Leeper A.}, Ramey E.S., Monda J.K., Hastings L.P., and Davison S. (2008). Performance evaluation of a high-speed inertial exercise trainer. The Journal of Strength \& Conditioning Research. 22(6): 1760-1768. \\[0.4pc]}
 %
-\CVOnlySmall{\boldName{A. Leeper}, M. Coday, P. Hari, J. Caruso. 
-Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers. 
+\CVOnlySmall{\boldName{A. Leeper}, M. Coday, P. Hari, J. Caruso.
+Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers.
 Proceedings of 53rd International Instrumentation Symposium, April 2007, Tulsa, OK.}
 %
+\CVOnly{
+\section{\underline{PRESENTATIONS}}
+\vspace{1.0pc}
+\textbf{\underline{Invited Talks:}}\\[0.4pc]
+``Telemanipulation using PCL."
+PCL Tutorial/Workshop at Robotics: Science and Systems 2011. Los Angeles, CA. July 2011. \\[0.4pc]
+%
+``Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers."
+ISA EXPO 2007. Houston, TX. October 2007. \\[0.4pc]
+%
+\textbf{\underline{Conference Presentations:}}\\[0.4pc]
+%
+``Assisted Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data."
+2nd Workshop on Robots in Clutter: Preparing Robots for the Real World (in conjunction with RSS).
+Berlin, Germany. June 2013. \\[0.4pc]
+%
+``Point Clouds Can Be Represented as Implicit Surfaces for Constraint-Based Haptic Rendering."
+International Conference on Robotics and Automation. St. Paul, MN. May 2012. \\[0.4pc]
+%
+``Constraint-based Haptic Rendering for Teleoperated Robot Grasping."
+IEEE Haptics Symposium. Vancouver, Canada. March 2012. \\[0.4pc]
+%
+``Constraint-based 3-DOF Haptic Rendering of Arbitrary Point Cloud Data."
+RGB-D: Advanced Reasoning with Depth Cameras (workshop in conjunction with RSS). Los Angeles, CA. June 2011. \\[0.4pc]
+%
+``Using Near-Field Stereo Vision for Robotic Grasping in Cluttered Environments."
+International Sympoisum on Experimental Robotics. New Delhi, India. December 2010. \\[0.4pc]
+%
+``Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers."
+53rd International Instrumentation Symposium. Tulsa, OK. April 2007.
+%
+}
 %
 \section{\underline{SKILLS}}
 \vspace{1.0pc}Strong expertise in robotics, dynamics, controls, and applied mathematics.
-%{\sl Computers: } Extensive experience operating in Linux and Windows. 
+%{\sl Computers: } Extensive experience operating in Linux and Windows.
 \\[0.25pc] {\sl Computation: }
 Comfortable in Linux and Windows environments.
-Software engineering (C++, Python) for robotics and simulation, with extensive use of version control and issue tracking. 
+Software engineering (C++, Python) for robotics and simulation, with extensive use of version control and issue tracking.
 Proficiency in MATLAB for computation and data analysis.
-Experience with ROS, Qt, PCL, OpenGL, OpenCV. 
-\\[0.25pc]{\sl Electronics: } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.  
-\\[0.25pc]{\sl Hardware: } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks). 
-\\[0.25pc]{\sl Languages: } English (native), Spanish (fluent), French (proficient reading and writing). 
-\\[0.25 		pc]{\sl Other: } Private pilot, recording engineer, bassist.    
+Experience with ROS, Qt, PCL, OpenGL, OpenCV.
+\\[0.25pc]{\sl Electronics: } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.
+\\[0.25pc]{\sl Hardware: } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks).
+\\[0.25pc]{\sl Languages: } English (native), Spanish (fluent), French (proficient reading and writing).
+\\[0.25 		pc]{\sl Other: } Private pilot, recording engineer, bassist.
 %
 %
 \CVOnly{
 \section{\underline{AWARDS}}
-\vspace{1.0pc}	
-          2007-2012 National Science Foundation Graduate Research Fellowship 
+\vspace{1.0pc}
+          2007-2012 National Science Foundation Graduate Research Fellowship
 \CVOnly{\\[0.0pc]2007 Stanford Graduate Fellowship }
 \CVOnly{\\[0.0pc]2007 John McCamey Award presented by ISA}
 \ResumeOnly{\\[0.0pc] Member of Tau Beta Pi and Phi Kappa Phi Honor Societies}
@@ -201,7 +234,7 @@ Experience with ROS, Qt, PCL, OpenGL, OpenCV.
 }
 %
 \CVOnly{
-\clearpage
+%\clearpage
 \section{\underline{REFERENCES}}
 \vspace{1.0pc}
 Dr. Kenneth Salisbury, Prof. Computer Science, 650.465.5700, jks@robotics.stanford.edu
@@ -209,7 +242,7 @@ Dr. Kenneth Salisbury, Prof. Computer Science, 650.465.5700, jks@robotics.stanfo
 \\[0.0pc]Dr. Kaijen Hsiao, Bosch Research and Technology Center, 617.304.1759, kaijenhsiao@gmail.com
 %\\[0.0pc]Oussama Khatib, Prof. Computer Science, 650.723.9753, khatib@cs.stanford.edu
 }
-% 
+%
 \end{resume}
 \end{document}
 
