@@ -4,12 +4,29 @@
 \usepackage{tabularx,booktabs}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font
-\setlength{\textheight}{9.25in}
-\setlength{\voffset}{-0.125in}
+\setlength{\textheight}{10in}
+%\setlength{\textwidth}{7in}
+\setlength{\voffset}{-0.5in}
+%\setlength{\hoffset}{-0.5in}
+\oddsidemargin=-0.5in
+\resumewidth=7.5in
 
 \newsectionwidth{20pt}
 
 \newcommand{\ifthen}[2]{\ifthenelse{#1}{#2}{}}
+
+%\newcommand{\compactlist}{
+%  \itemize
+%  \setlength{\itemsep}{0pt}%
+%  \setlength{\parskip}{0pt}%
+%%  \setlength{\parsep}{0pt}
+%}
+
+\newenvironment{compactlist}{
+	\begin{itemize}\itemsep=0pt
+}{
+	\end{itemize}
+}
 
 %%% We can put stuff inside a \CVOnly{} tag to make it only show up for a CV :)
 \providecommand{\ResumeCV}{0}% fallback definition % 0=Resume, 1=CV
@@ -29,16 +46,12 @@
 
 \newcommand{\hide}[1]{}
 
-
-
 \newcommand{\boldName}[1]{\textbf{#1}}
 
-%\setpapersize{USletter}
-%\setmarginsrb{1in}{1in}{1in}{1in}{0pt}{0mm}{0pt}{0mm}
-
 \begin{document}
+%\resumewidth{100pt}
 
-\name{Adam E. Leeper}
+\name{Adam Eric Leeper}
 % \address used twice to have two lines of address
 \address{469 Homer Ave, Palo Alto, CA 94301}
 \address{650.762.6844}
@@ -46,50 +59,78 @@
 \address{www.adamleeper.com}
 %\address{www.stanford.edu/$\sim$aleeper }
 
+%\setpapersize{USletter}
+%\setmarginsrb{1in}{1in}{1in}{1in}{0pt}{0mm}{0pt}{0mm}
 
 \begin{resume}
-
-\section{\underline{EDUCATION}}
-\vspace{1.0pc}
-Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salisbury}
-\hfill 2013%
-\CVOnly{ {\small
-\\[0.0pc]{\bf Advisor:} Professor Kenneth Salisbury
-\\[0.0pc]{\bf Thesis:} Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
-\\[-0.6pc]} }
-%
-\\[0.0pc]M.S. Mechanical Engineering, Stanford University, 3.97 GPA \hfill  2009
-%\\[0.0pc]{\bf University of Tulsa: }
-\\[0.0pc] B.S. Engineering Physics, The University of Tulsa, 3.99 GPA \hfill 2007
-%
 %
 \section{\underline{EXPERIENCE}}
 \vspace{1.0pc}
-{\bf Senior Systems Engineer} - hiDOF, Inc., South San Francisco, CA  \hfill 2013 - 2014
-\\[0.0pc]Software engineering  and technology transfer for robotics applications.
+{\bf Senior Systems Engineer} - hiDOF, Inc., South San Francisco, CA  \hfill \textbf{July `13 - present}
+\begin{compactlist}
+\item Key software developer for major client. C++ system design, algorithm development, and build-system support.
+\item Projects in wheeled vehicle motion planning, visual inertial navigation, and visual monocular SLAM.
+\end{compactlist}
 %
-\\[0.4pc]{\bf Research Intern} - Willow Garage, Inc., Menlo Park, CA \hfill 2010 - 2013
-\\[0.0pc]Created systems, controllers, and user interfaces for teleoperated mobile manipulation.
-%\CVOnly{\\[0.0pc]Created systems and user interfaces for teleoperated mobile manipulation.}
+{\bf Research Intern} - Willow Garage, Inc., Menlo Park, CA \hfill \textbf{Sept. `10 - June `13}
+\begin{compactlist}
+%\item Created systems, controllers, and user interfaces for teleoperated mobile manipulation.
+\item Developed and maintained the first PR2 teleoperation application using interactive markers, 
+which saw extensive use by other researchers and formed a major component of the \textit{Robots for Humanity} project.
+\item Developed novel optimization-based controller and user interfaces for assisted collision-free teleoperation.
+\item Conducted user experiments and authored papers published in major robotics conferences.
+%\item Authored new ROS packages for 6-DOF/haptic user interaction and robot teleoperation.
+\end{compactlist}
 %
-\\[0.4pc]{\bf Research Assistant} - Salisbury Robotics Lab, Stanford, CA \hfill 2008 - 2013
-\\[0.0pc]Conducted research in algorithms for haptic rendering and robot control.
-\CVOnly{\\[0.0pc]Implemented miniature stereo camera sensor hardware for a robot gripper.}
+{\bf Graduate Researcher} - Salisbury Robotics Lab, Stanford, CA \hfill \textbf{Aug. `08 - June `13}
+\begin{compactlist}
+\item Developed new algorithms for haptic rendering and robot control (in collaboration with Willow Garage).
+\item Implemented miniature stereo camera sensor for a robot gripper (PCB design, mechanical hardware prototyping).
+\end{compactlist}
 %
 \CVOnly{
-\\[0.4pc]{\bf Electrical Engineering Intern} - Qual-Tron, Inc., Tulsa, OK \hfill 2006 - 2007
-\\[0.0pc] Designed and implemented test procedures for IR and magnetic sensor products.
-\\[0.0pc]Led redesign of a magnetic sensor product to reduce cost and simplify assembly.}
-%
-\hide{
-\\[0.4pc]{\bf Summer Intern} - Atmel Corporation \hfill 2005
-\\[0.4pc]{\bf Summer Research Intern} - NASA Glenn Research Center \hfill 2004%
+{\bf Electrical Engineering Intern} - Qual-Tron, Inc., Tulsa, OK \hfill \textbf{March `06 - Feb. `07}
+\begin{compactlist}
+\item Designed and implemented test procedures for IR and magnetic sensor products.
+\item Led redesign of a magnetic sensor product to reduce cost and simplify assembly.
+\end{compactlist}
 }
 %
-\\[0.4pc]{\bf \underline{Consulting:}}
-\\[0.2pc]{\bf Motion Genesis, LLC} - Developed visualization tools for multi-body systems. \hfill 2011-2013
-\\[0.0pc]{\bf Applied Materials, Inc.} - Subcontracting consultant for robot motion visualization. \hfill 2012
-\\[0.0pc]{\bf Charm Labs} - Dynamics and control. Confidential. \hfill 2012
+\hide{
+\\[0.4pc]{\bf Summer Intern} - Atmel Corporation \hfill \textbf{Summer `05}
+\\[0.4pc]{\bf Summer Research Intern} - NASA Glenn Research Center \hfill \textbf{Summer `04}%
+}
+%
+{\bf \underline{Consulting:}}
+\\[0.2pc]{\bf Motion Genesis, LLC} - Developed web-based visualization software for multi-body systems. \hfill \textbf{Spring `11 - Fall `13}%
+{\\[0.0pc]{\bf Applied Materials, Inc.} - Subcontracting consultant for robot motion visualization. \hfill \textbf{Fall `12}}%
+\CVOnly{\\[0.0pc]{\bf Charm Labs} - Dynamics and control. Confidential. \hfill \textbf{Summer `12}}%
+%
+%
+\section{\underline{SKILLS}}
+\vspace{1.0pc}
+%\textbf{Overview:} Strong expertise in robotics, dynamics, controls, and applied mathematics.
+\textbf{Applied Math - } Expert in dynamics, kinematics, and 3D geometry as applied to robotics, simulation, and graphics.
+\\[0.0pc]\textbf{Software Languages - } Extensive use of C++ and Python (6 years, 3 in production) in large software projects with a focus on quality and maintainability. Proficient in web programming (Javascript, HTML, CSS) and MATLAB.
+\\[0.0pc]\textbf{Software Tools - } Expert knowledge of ROS. Experience with MoveIt!, PCL, OpenCV, OpenGL, and Qt.
+Development experience in Ubuntu Linux (expert) and Windows (proficient) using version control (git, svn) and issue tracking. %Familiar with Windows development. 
+\\[0.0pc]\textbf{Electronics - } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.
+\\[0.0pc]\textbf{Hardware - } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks).
+\\[0.0pc]\textbf{Languages - } English (native), Spanish (fluent), French (proficient reading and writing).
+\\[0.0	pc]\textbf{Other - } Private pilot, recording engineer, bassist.
+%
+%
+\section{\underline{EDUCATION}}
+\vspace{1.0pc}
+\textbf{Ph.D.} Mechanical Engineering under Professor Ken Salisbury, Stanford University, 3.94 GPA
+\hfill \textbf{June `13}%
+{ {\small
+%\\[0.0pc]{\bf Advisor:} Professor Kenneth Salisbury
+\\[0.0pc]{\bf Thesis:} Robot Telemanipulation in Unstructured Environments: Sensors, Algorithms, Interfaces.
+\\[-0.6pc]} }
+%
+\\[0.0pc]\textbf{M.S.} Mechanical Engineering, Stanford University, 3.97 GPA \hfill  \textbf{March `09}
+\\[0.0pc]\textbf{B.S.} Engineering Physics, The University of Tulsa, 3.99 GPA \hfill \textbf{May `07}
 %
 
 %
@@ -98,38 +139,39 @@ Ph.D. Mechanical Engineering, Stanford University\ResumeOnly{, Advisor Ken Salis
 \vspace{1.0pc}
 %{\bf Instructor: }
 %\\[0.0pc]
-{\bf Instructor:} ENGR 14 Statics, Stanford University\CVOnly{, 77 students}. \hfill \CVOnly{Spring }2014%
+{\bf Instructor:} ENGR 14 Statics, Stanford University, 77 students. \hfill \textbf{\CVOnly{Spring }2014}%
 \\[0.0pc]
-{\bf Instructor:} ME 101 Dynamics, San Jose State University\CVOnly{, 35 students}. \hfill \ResumeOnly{2011, 2012,} \CVOnly{Fall }2013%
+{\bf Instructor:} ME 101 Dynamics, San Jose State University\ResumeOnly{, 50 students}\CVOnly{, 35 students}. \hfill \textbf{\ResumeOnly{2011, 2012,} \CVOnly{Fall }2013}%
 %
-\CVOnly{
 \\[0.0pc]
+\CVOnly{
 \begin{tabularx}{\textwidth}{@{}l@{ }Xr@{}}
-	         {\bf Instructor:} & ME 101 Dynamics, San Jose State University\CVOnly{, 49 students}. & \hfill Fall 2012%
-	\\[0.0pc]                  & Student-rated 4.8/5.0 for overall teaching quality. &
-	\\[0.0pc]{\bf Instructor:} & ME 101 Dynamics, San Jose State University, 56 students. & \hfill Fall 2011
-	\\[0.0pc]                  & Student-rated 4.6/5.0 for overall teaching quality. &
+	         {\bf Instructor:} & ME 101 Dynamics, San Jose State University\CVOnly{, 49 students}. & \hfill \textbf{Fall 2012}%
+	%\\[0.0pc]                  & Student-rated 4.8/5.0 for overall teaching quality. &
+	\\[0.0pc]{\bf Instructor:} & ME 101 Dynamics, San Jose State University, 56 students. & \hfill \textbf{Fall 2011}
+	%\\[0.0pc]                  & Student-rated 4.6/5.0 for overall teaching quality. &
 \end{tabularx}
 }
 %
-\\[0.0pc]
-{\bf Instructor:} Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \CVOnly{Summer}
-2010
+{\bf Instructor:} Programming and Robotics, EPGY Summer Institutes at Stanford. \hfill \textbf{\CVOnly{Summer}
+2010}%
 %
+\CVOnly{
 \\[0.4pc]
 \begin{tabularx}{\textwidth}{@{}l@{ }l@{ - }Xr@{}}
 Course Assistant: & ME 331b & Dynamics and Control with Paul Mitiguy. 
-& \CVOnly{Spring }2012
+& \textbf{\CVOnly{Spring }2012}
 \\[0.0pc]
 Course Assistant: & CS 277 & Experimental Haptics with Ken Salisbury. 
-& \CVOnly{Winter }2011
+& \textbf{\CVOnly{Winter }2011}
 \\[0.0pc]
 Course Assistant: & CS 223a & Robotics with Oussama Khatib. 
-& \CVOnly{Winter }2010
+& \textbf{\CVOnly{Winter }2010}
 \\[0.0pc]
 Course Assistant: & ENGR 15 & Dynamics with Paul Mitiguy. 
-& \CVOnly{Fall }2009
+& \textbf{\CVOnly{Fall }2009}
 \end{tabularx}
+}
 %
 %
 \ResumeOnly{\section{\underline{SELECTED PUBLICATIONS}}}
@@ -141,7 +183,7 @@ Course Assistant: & ENGR 15 & Dynamics with Paul Mitiguy.
 %
 \BothSmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, and K. Salisbury.
 Methods for Collision-Free Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data.
-2013 IEEE-RAS International Conference on Humanoid Robots. October, 2013. Atlanta, Georgia. \\[0.4pc]}
+2013 International Conference on Humanoid Robots. October, 2013. Atlanta, Georgia. \\[0.4pc]}
 %
 \CVOnlySmall{\boldName{A. Leeper}, K. Hsiao, M. Ciocarlie, I. Sucan, K. Salisbury.
 Assisted Arm Teleoperation in Clutter Using Constraints from 3D Sensor Data. In 2nd Workshop on Robots in Clutter:
@@ -185,7 +227,7 @@ Proceedings of 53rd International Instrumentation Symposium, April 2007, Tulsa, 
 \vspace{1.0pc}
 \textbf{\underline{Invited Talks:}}\\[0.4pc]
 ``Telemanipulation using PCL."
-PCL Tutorial/Workshop at Robotics: Science and Systems 2011. Los Angeles, CA. July 2011. \\[0.4pc]
+PCL Tutorial at Robotics: Science and Systems 2011. Los Angeles, CA. July 2011. \\[0.4pc]
 %
 ``Instrumentation of a High-Speed Inertial Exercise Device Using Load Cell Transducers."
 ISA EXPO 2007. Houston, TX. October 2007. \\[0.4pc]
@@ -213,18 +255,21 @@ International Sympoisum on Experimental Robotics. New Delhi, India. December 201
 %
 }
 %
-\section{\underline{SKILLS}}
-\vspace{1.0pc}Strong expertise in robotics, dynamics, controls, and applied mathematics.
-%{\sl Computers: } Extensive experience operating in Linux and Windows.
-\\[0.25pc] {\sl Computation: }
-Comfortable in Linux and Windows environments.
-Software engineering (C++, Python) for robotics and simulation, with extensive use of version control and issue tracking.
-Proficiency in MATLAB for computation and data analysis.
-Experience with ROS, Qt, PCL, OpenGL, OpenCV.
-\\[0.25pc]{\sl Electronics: } Circuit design/debugging, prototype PCB layout/fabrication, embedded systems.
-\\[0.25pc]{\sl Hardware: } General machine shop rapid-prototyping skills, and proficient in CAD tools (Solidworks).
-\\[0.25pc]{\sl Languages: } English (native), Spanish (fluent), French (proficient reading and writing).
-\\[0.25 		pc]{\sl Other: } Private pilot, recording engineer, bassist.
+%
+\CVOnly{
+\section{\underline{OPEN SOURCE SOFTWARE}~(github.com/aleeper)}
+\vspace{1.2pc}
+\begin{tabularx}{\textwidth}{@{}l@{ - }Xr@{}}
+MGView & Javascript web app for visualizing rigid body simulations. Author and maintainer.%
+\\[0.0pc]
+ROS & Contributor and maintainer of packages in the visualization and device driver stacks.%
+\\[0.0pc]
+MoveIt! & Contributor to the user interaction and visualization tools within MoveIt! %
+\\[0.0pc]
+three.js & Contributed STL parser module to enable importing of CAD parts (e.g. from SolidWorks).%
+\end{tabularx}
+}
+%
 %
 %
 \CVOnly{
@@ -246,8 +291,8 @@ Experience with ROS, Qt, PCL, OpenGL, OpenCV.
 %\clearpage
 \section{\underline{REFERENCES}}
 \vspace{1.0pc}
-Dr. Kenneth Salisbury, Prof. Computer Science, 650.465.5700, jks@robotics.stanford.edu
-\\[0.0pc]Dr. Paul Mitiguy, Prof. Mechanical Engineering, 650.346.9595,  mitiguy@stanford.edu
+Dr. Kenneth Salisbury, Professor (Research) of Computer Science, 650.465.5700, jks@robotics.stanford.edu
+\\[0.0pc]Dr. Paul Mitiguy, Motion Genesis LLC and Stanford University Faculty, 650.346.9595,  mitiguy@stanford.edu
 \\[0.0pc]Dr. Kaijen Hsiao, Bosch Research and Technology Center, 617.304.1759, kaijenhsiao@gmail.com
 %\\[0.0pc]Oussama Khatib, Prof. Computer Science, 650.723.9753, khatib@cs.stanford.edu
 }
