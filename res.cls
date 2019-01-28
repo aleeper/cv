@@ -236,7 +236,18 @@
 \def\namefont{\large\bf}
 \def\@linename{\begingroup
   \def\\{, }
-  {\namefont\@name}
+  %{\namefont\@name}
+  \@ifundefined{@addressfive}{%
+    {\namefont\@name}
+  }{%
+    \leavevmode\hbox to \textwidth
+      {
+        
+          \hbox{\namefont\@name}
+          \hfill \hbox{\@addressfive}
+       
+      }\par
+  }
   \vskip 2pt
   \fullline
   \vskip 2pt
@@ -516,7 +527,10 @@
     {
       \@ifundefined{@addressthree}{\def\@addressthree{#1}}
       {
-        \def\@addressfour{#1}
+        \@ifundefined{@addressfour}{\def\@addressfour{#1}}
+        {
+          \def\@addressfive{#1}
+        }
       }
     }
   }
